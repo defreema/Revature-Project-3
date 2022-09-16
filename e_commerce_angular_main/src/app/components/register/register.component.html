@@ -1,0 +1,63 @@
+<img class="img-center" src="../../../assets/images/rev-logo.png" width="30%" height="30%" alt="Revature">
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="stylesheet" href="register.component.css">
+ </head>
+ <body>
+   <div class="center">
+    <h1>Register</h1>
+    <form id="register-form" [formGroup]="registerForm">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="fname" id="inputFirstName" placeholder="">
+        <label for="inputFirstName">First Name</label>
+      </div>
+      <br>
+      <div class="input-required">
+       <span class="text-danger" *ngIf="registerForm.controls['fname'].dirty && registerForm.hasError('required','fname')">*First Name is required</span>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="lname" id="inputLastName" placeholder="">
+        <label for="inputLastName">Last Name</label>
+      </div>
+      <br>
+      <div class="input-required">
+       <span class="text-danger" *ngIf="registerForm.controls['lname'].dirty && registerForm.hasError('required','lname')">*Last Name is required</span>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" formControlName="email" id="inputEmail" placeholder="">
+        <label for="inputEmail">Email</label>
+      </div>
+      <br>
+      <div class="input-required">
+       <span class="text-danger" *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required','email')">*Email is required</span>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" formControlName="password" id="inputPassword" placeholder="">
+        <label for="inputPassword">Password</label>
+      </div>  
+      <br>
+      <div class="input-required">
+       <span class="text-danger" *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required','password')">*Password is required</span>
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="address" id="inputFirstName" placeholder="">
+        <label for="inputFirstName">Address</label>
+      </div>
+      <br>
+      <div class="input-required">
+       <span class="text-danger" *ngIf="registerForm.controls['address'].dirty && registerForm.hasError('required','address')">*Address is required</span>
+      </div>
+      <br>
+       <div class="pass">
+         <button mat-button class="registerbtn" (click)="onSubmit()">Register</button>
+       </div>
+     </form>
+   </div>
+ 
+ </body>
+</html>
+ 
+ 
