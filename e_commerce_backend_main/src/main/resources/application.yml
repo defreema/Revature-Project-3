@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQL82Dialect
+    defer-datasource-initialization: true
+  datasource:
+    url: jdbc:postgresql://db-rev-pj-1.ccnb64gc8794.us-east-1.rds.amazonaws.com:5432/postgres
+
+    driver-class-name: org.postgresql.Driver
+    username: Admin_CD104
+    password: CVD#1997
+  h2:
+    console.enabled: true
+
+
+
+#    //database-platform: org.hibernate.dialect.H2Dialect
+#    //url: jdbc:h2:mem:memdb
+#   //driver-class-name: org.h2.Driver
+#server:
+#  port: 8080
+#spring:
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    defer-datasource-initialization: true
+#  datasource:
+#    url: jdbc:h2:mem:memdb
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password: password
+#  h2:
+#    console.enabled: true
